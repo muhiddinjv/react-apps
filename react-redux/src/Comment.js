@@ -1,7 +1,6 @@
 import React from "react";
 
 const Comment = (props) => {
-  console.log(props);
   return (
     <div className="comment" style={{ border: "1px solid grey" }}>
       <a href="/" className="avatar">
