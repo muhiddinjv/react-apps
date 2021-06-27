@@ -1,40 +1,23 @@
 import React from "react";
 
-class Comment extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      avatar: "img/avatar1.png",
-      author: "Kalla bo'sh",
-      date: new Date().toLocaleTimeString(),
-      day: new Date().toLocaleDateString(),
-      text: "Mak mak makaron?",
-    };
-  }
-  
-  render() {
-    return (
-      <div
-        className="ui container comments"
-        style={{ textAlign: "left", border: "1px solid blue" }}
-      >
-        <div className="comment">
-          <a href="/" className="avatar">
-            <img alt="avatar" src={this.state.avatar} />
-          </a>
-          <div className="content">
-            <a href="/" className="author">
-              {this.state.author}
-            </a>
-            <div className="metadata">
-              <span className="date">{this.state.day} at {this.state.date}</span>
-            </div>
-            <div className="text">{this.state.text}</div>
-          </div>
+const Comment = (props) => {
+  console.log(props);
+  return (
+    <div className="comment" style={{ border: "1px solid grey" }}>
+      <a href="/" className="avatar">
+        <img alt="avatar" src={props.img} />
+      </a>
+      <div className="content">
+        <a href="/" className="author">
+          {props.author}
+        </a>
+        <div className="metadata">
+          <span className="date">Today at {props.time}</span>
         </div>
+        <div className="text">{props.text}</div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Comment;
