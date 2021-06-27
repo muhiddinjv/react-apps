@@ -1,8 +1,9 @@
 import React from "react";
+import './Comment.css';
 
 const Comment = (props) => {
   return (
-    <div className="comment" style={{ border: "1px solid grey" }}>
+    <div className="comment">
       <a href="/" className="avatar">
         <img alt="avatar" src={props.img} />
       </a>
