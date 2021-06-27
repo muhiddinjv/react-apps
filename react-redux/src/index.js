@@ -1,35 +1,42 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import reactDom from "react-dom";
 
-const getTime = () => {
-  return new Date().toLocaleTimeString();
-};
-
-const App = () => {
-  const style = { backgroundColor: "grey", color: "white" };
-  const btnTxt = { text: "click me" };
-  // const arr = ['hi','there'];
-  const clicked = (e) => {
-    alert(e.target);
+class Users extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      img: "img here",
+      title: "Alex",
+      post: "Great blog post!",
+      time: this.getTime(),
+    };
+  }
+  getTime = () => {
+    return new Date().toLocaleTimeString();
   };
+  render() {
+    return (
+      <div
+        className="ui container comments"
+        style={{ textAlign: "left", border: "1px solid blue" }}
+      >
+        <div className="comment">
+          <a href="/" className="avatar">
+            <img alt="avatar" src="../img/avatar1.png" />
+          </a>
+          <div className="content">
+            <a href="/" className="author">
+              Sam
+            </a>
+            <div className="metadata">
+              <span className="date">Today at 6:00PM</span>
+            </div>
+            <div className="text">Nice blog post!</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 
-  return (
-    <div style={{ textAlign: "center" }}>
-      <h3>Current Time: {getTime()}</h3>
-
-      <label className="label" htmlFor="name">
-        Enter name:{" "}
-      </label>
-
-      <input id="name" type="text" />
-
-      <button onClick={clicked} style={style}>
-        {btnTxt.text}
-        {/* do not use {btnTxt} bc jsx cannot print objects */}
-        {/* use {btnTxt.text} so that jsx can understand it */}
-      </button>
-    </div>
-  );
-};
-
-ReactDOM.render(<App />, document.querySelector("#root"));
+reactDom.render(<Users/>, document.querySelector('#root'));
