@@ -16,12 +16,6 @@ const App = () => {
         style={{ textAlign: "left"}}
       >
         <Comment
-          author="Alex"
-          img="img/avatar1.png"
-          text="wow awesome!"
-          time="10:00 PM"
-        />
-        <Comment
           author="John"
           img="img/avatar2.png"
           text="I love it!"
@@ -32,6 +26,12 @@ const App = () => {
           img="img/avatar3.png"
           text="Killer app!"
           time={getTime()}
+        />
+        <Comment
+          author="Alex"
+          img="img/avatar1.png"
+          text="wow awesome!"
+          time="10:00 PM"
         />
         <Comment
           author="Lola"
