@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Comment from "./Comment";
 import Header from "./Header";
 import Approval from "./Approval";
+import Message from "./Message";
 
 const getTime = () => {
   return new Date().toLocaleTimeString();
@@ -15,7 +16,12 @@ const App = () => {
 
       <div className="ui container comments" style={{ textAlign: "left" }}>
         <Approval>
-          Are you sure?
+          <h4>Warning!</h4><p>Are you sure?</p>
+          <Message
+            header="This is the header"
+            text="this is the text of the 
+            Message component. Its beautiful isn't it?"
+          />
         </Approval>
         <Approval>
           <Comment
