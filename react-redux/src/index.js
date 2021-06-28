@@ -13,10 +13,10 @@ const App = () => {
     <div style={{ textAlign: "center" }}>
       <Header time={getTime()} />
 
-      <div
-        className="ui container comments"
-        style={{ textAlign: "left"}}
-      >
+      <div className="ui container comments" style={{ textAlign: "left" }}>
+        <Approval>
+          Are you sure?
+        </Approval>
         <Approval>
           <Comment
             author="John"
@@ -26,23 +26,21 @@ const App = () => {
           />
         </Approval>
         <Approval>
-        <Comment
-          author="Rambo"
-          img="img/avatar3.png"
-          text="Killer app!"
-          time={getTime()}
-        />
-                </Approval>
-                <Approval>
-
-        <Comment
-          author="Lola"
-          img="img/avatar5.png"
-          text="How did u do it?"
-          time={getTime()}
-        />
-                </Approval>
-
+          <Comment
+            author="Rambo"
+            img="img/avatar3.png"
+            text="Killer app!"
+            time={getTime()}
+          />
+        </Approval>
+        <Approval>
+          <Comment
+            author="Lola"
+            img="img/avatar5.png"
+            text="How did u do it?"
+            time={getTime()}
+          />
+        </Approval>
       </div>
     </div>
   );

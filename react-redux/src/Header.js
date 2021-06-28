@@ -16,7 +16,7 @@ const Header = (props) => {
         Enter name:{" "}
       </label>
 
-      <input id="name" type="text" />
+      <input id="name" type="text" className="ui input"/>
 
       <button onClick={popup} style={style}>
         {btnTxt.text}
