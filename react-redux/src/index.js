@@ -5,7 +5,6 @@ import Header from "./Header";
 import Approval from "./Approval";
 import Message from "./Message";
 import Document from "./Document";
-import Appone from "./seasons-1/Appone";
 
 const getTime = () => {
   return new Date().toLocaleTimeString();
@@ -17,6 +16,7 @@ const App = () => {
       <Header time={getTime()} />
 
       <div className="ui container comments" style={{ textAlign: "left" }}>
+
         <Document />
         <Approval>
           <h4>Warning!</h4>
@@ -51,7 +51,6 @@ const App = () => {
             time={getTime()}
           />
         </Approval>
-        <Appone />
       </div>
     </div>
   );

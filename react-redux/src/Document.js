@@ -1,5 +1,6 @@
 import React from 'react';
 import Placeholder from './Placeholder';
+import Appone from './seasons-1/Appone';
 
 const Document = (props) =>{
     return(
@@ -7,7 +8,7 @@ const Document = (props) =>{
             <Placeholder>
                 <div className="ui icon header">
                     <i className="pd file outline icon"></i>
-                    No documents are listed for this customer
+                    <Appone />
                 </div>
                 <div className="ui primary button">Add Document</div>
             </Placeholder>
