@@ -22,7 +22,7 @@ const App = () => {
           <h4>Warning!</h4>
           <p>Are you sure?</p>
           <Message
-            header="This is the header"
+            header="Message Component"
             text="this is the text of the 
             Message component. Its beautiful isn't it?"
           />
@@ -31,7 +31,7 @@ const App = () => {
           <Comment
             author="John"
             img="img/avatar2.png"
-            text="I love it!"
+            text="I love this Comment component inside Approval component!"
             time="3:00 PM"
           />
         </Approval>

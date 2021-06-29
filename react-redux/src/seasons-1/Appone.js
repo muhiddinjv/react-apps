@@ -1,4 +1,5 @@
 import React from "react";
+import Season from "./Season";
 
 class Appone extends React.Component {
   //This is the ONLY time we do direct assignment to this.state
@@ -23,9 +24,9 @@ class Appone extends React.Component {
       return <div>Error: {this.state.errorMsg}</div>;
     }
     if (!this.state.errorMsg && this.state.lat) {
-      return <div>Error: {this.state.lat}</div>;
+      return <Season lat={this.state.lat} />;
     }
-    return <div>Loading... "Appone" </div>
+    return <div>Loading...{" "}</div>
   }
 }
 
