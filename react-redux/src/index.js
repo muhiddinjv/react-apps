@@ -4,6 +4,7 @@ import Comment from "./Comment";
 import Header from "./Header";
 import Approval from "./Approval";
 import Message from "./Message";
+import Document from "./Document";
 
 const getTime = () => {
   return new Date().toLocaleTimeString();
@@ -15,8 +16,10 @@ const App = () => {
       <Header time={getTime()} />
 
       <div className="ui container comments" style={{ textAlign: "left" }}>
+        <Document />
         <Approval>
-          <h4>Warning!</h4><p>Are you sure?</p>
+          <h4>Warning!</h4>
+          <p>Are you sure?</p>
           <Message
             header="This is the header"
             text="this is the text of the 
