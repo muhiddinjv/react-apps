@@ -8,7 +8,7 @@ const Header = (props) => {
 
   const popup = () => {
     return title === ""
-      ? alert("enter your name")
+      ? alert("enter some text")
       : alert("Hello " + title + "!");
   };
   return (

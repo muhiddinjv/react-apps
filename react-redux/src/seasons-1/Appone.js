@@ -12,9 +12,9 @@ class Appone extends React.Component {
       // called setState to update state object
       (position) => this.setState({ lat: position.coords.latitude }),
       //NEVER DO A DIRECT ASSIGNMENT TO STATE OBJECT
-      //   this.state.lat = position.coords.latitude;
+      //WRONG: this.state.lat = position.coords.latitude;
       (err) => this.setState({ errorMsg: err.message })
-      // ALWAYS use SETSTATE instead
+      // ALWAYS use "setState" instead
     );
   }
 
