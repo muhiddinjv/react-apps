@@ -1,7 +1,6 @@
 import React from "react";
 
 const getSeason = (lat, month) => {
-  month = 9;
   if (month > 2 && month < 9) {
     return lat > 0 ? "summer" : "winter";
   } else {
@@ -11,12 +10,9 @@ const getSeason = (lat, month) => {
 
 const Season = (props) => {
   const season = getSeason(props.lat, new Date().getMonth());
-  console.log(season);
-  return (
-    <div>
-        Season
-    </div>
-  );
+  const text = season === 'winter' ? 'Brrr, its chilly!' : 'Lets hit the beach!';
+  return <div>console.log({text})</div>
+  // <h1>{text}</h1>
 };
 
 export default Season;

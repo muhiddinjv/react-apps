@@ -26,8 +26,11 @@ class Appone extends React.Component {
     if (!this.state.errorMsg && this.state.lat) {
       return <Season lat={this.state.lat} />;
     }
+    console.log(this.state.lat);
     return <div>Loading...{" "}</div>
+    
   }
+  
 }
 
 export default Appone;

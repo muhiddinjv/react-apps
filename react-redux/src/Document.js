@@ -23,7 +23,7 @@ const Document = (props) => {
           </li>
           <li>We call geolocation service</li>
           <li>React calls the components render method</li>
-          <li>App returns JSS, gets rendered to page as HTML</li>
+          <li>App returns JSX, gets rendered to page as HTML</li>
           <li>... wait ...</li>
           <li>We get result of geolocation!</li>
           <li>We update our state object with a call 'this.setState'</li>
@@ -31,6 +31,7 @@ const Document = (props) => {
           <li>React calls our 'render' method a second time</li>
           <li>Render method returns some (uploaded) JSX</li>
           <li>React takes that JSX and updates content onscreen</li>
+          <i className="disabled users icon">icon </i>
         </ol>
       </Placeholder>
     </div>
