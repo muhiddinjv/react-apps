@@ -1,6 +1,6 @@
 import React from "react";
 
-const Loading = (props) => {
+const Loader = (props) => {
   return (
     <div className="ui segment" style={{ height: "100vh" }}>
       <div className="ui active dimmer">
@@ -11,6 +11,6 @@ const Loading = (props) => {
   );
 };
 
-Loading.defaultProps = { message: "loading..." };
+Loader.defaultProps = { message: "Loading..." };
 
-export default Loading;
+export default Loader;

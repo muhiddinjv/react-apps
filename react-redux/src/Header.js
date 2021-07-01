@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Placeholder from "./Placeholder";
+import Clock from "./seasons-1/Clock";
 
 const Header = (props) => {
   const [title, setTitle] = useState("");
@@ -16,7 +17,7 @@ const Header = (props) => {
     <div>
       <Placeholder>
         <div style={{textAlign:"center"}}>
-        <h3>Current Time: {props.time}</h3>
+        <Clock/>
           <label className="label" htmlFor="name">
             Enter name:{" "}
           </label>

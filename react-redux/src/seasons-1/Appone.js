@@ -1,6 +1,6 @@
 import React from "react";
 import SeasonDisplay from "./SeasonDisplay";
-import Loading from './Loading'
+import Loader from "./Loader";
 
 class Appone extends React.Component {
   //This is the ONLY time we do direct assignment to this.state
@@ -19,8 +19,11 @@ class Appone extends React.Component {
     );
   }
 
-  render() {
-    // React says "You MUST define render"
+  
+  renderContent() {// always put conditions in a helper method 
+  //like this to wrap everything that comes out of the component
+  //with some common element
+
     if (this.state.errorMsg && !this.state.lat) {
       return <div>Error: {this.state.errorMsg}</div>;
     }
@@ -28,7 +31,12 @@ class Appone extends React.Component {
       return <SeasonDisplay lat={this.state.lat} />;
     }
     // console.log(this.state.lat);
-    return <Loading message="Please accept location request!"/>
+    return <Loader message="Please accept location request!" />;
+  }
+
+  render() {
+    // To change all the pages (error, loader, content), helper function (renderContent) should be used
+    return <div className="border red">{this.renderContent()}</div>;
   }
 }
 

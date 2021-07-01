@@ -15,7 +15,7 @@ const App = () => {
     <div className="app">
 
       <div className="ui container comments">
-      <Header time={getTime()} />
+      <Header />
         <Document />
         <div className="approval-cards" style={{display:"flex", flexWrap:"wrap"}}>
           <Approval>
