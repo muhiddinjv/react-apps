@@ -1,6 +1,5 @@
 import './SeasonDisplay.css';
 import React from "react";
-
 /*
 instead of the following 2 long and duplicated ternary expressions:
   const text = season === 'winter' ? 'Brrr, its chilly!' : 'Lets hit the beach!';

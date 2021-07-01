@@ -5,6 +5,14 @@
   height: 100vh;
 }
 
+.season-display.winter i {
+  color: blue;
+}
+
+.season-display.summer i {
+  color: red;
+}
+
 .icon-left {
   position: absolute;
   top: 70px;

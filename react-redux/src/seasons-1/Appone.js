@@ -27,10 +27,15 @@ class Appone extends React.Component {
       return <SeasonDisplay lat={this.state.lat} />;
     }
     console.log(this.state.lat);
-    return <div>Loading...{" "}</div>
-    
+    return (
+      <div className="ui segment" style={{ height: "100vh" }}>
+        <div className="ui active dimmer">
+          <div className="ui text loader">Loading</div>
+        </div>
+        <p></p>
+      </div>
+    );
   }
-  
 }
 
 export default Appone;
