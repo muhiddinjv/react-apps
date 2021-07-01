@@ -12,45 +12,46 @@ const getTime = () => {
 
 const App = () => {
   return (
-    <div className="app" style={{ textAlign: "center" }}>
+    <div className="app">
+
+      <div className="ui container comments">
       <Header time={getTime()} />
-
-      <div className="ui container comments" style={{ textAlign: "left" }}>
-
         <Document />
-        <Approval>
-          <h4>Warning!</h4>
-          <p>Are you sure?</p>
-          <Message
-            header="Message Component"
-            text="this is the text of the 
+        <div className="approval-cards" style={{display:"flex", flexWrap:"wrap"}}>
+          <Approval>
+            {/* <h4>Warning!</h4>
+            <p>Are you sure?</p> */}
+            <Message
+              header="Message Component"
+              text="this is the text of the 
             Message component. Its beautiful isn't it?"
-          />
-        </Approval>
-        <Approval>
-          <Comment
-            author="John"
-            img="img/avatar2.png"
-            text="I love this Comment component inside Approval component!"
-            time="3:00 PM"
-          />
-        </Approval>
-        <Approval>
-          <Comment
-            author="Rambo"
-            img="img/avatar3.png"
-            text="Killer app!"
-            time={getTime()}
-          />
-        </Approval>
-        <Approval>
-          <Comment
-            author="Lola"
-            img="img/avatar5.png"
-            text="How did u do it?"
-            time={getTime()}
-          />
-        </Approval>
+            />
+          </Approval>
+          <Approval>
+            <Comment
+              author="John"
+              img="img/avatar2.png"
+              text="I love this Comment component inside Approval component!"
+              time="3:00 PM"
+            />
+          </Approval>
+          <Approval>
+            <Comment
+              author="Rambo"
+              img="img/avatar3.png"
+              text="Killer app!"
+              time={getTime()}
+            />
+          </Approval>
+          <Approval>
+            <Comment
+              author="Lola"
+              img="img/avatar5.png"
+              text="How did u do it?"
+              time={getTime()}
+            />
+          </Approval>
+        </div>
       </div>
     </div>
   );

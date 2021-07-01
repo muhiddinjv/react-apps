@@ -1,0 +1,12 @@
+.bothicons {
+  position: absolute;
+  bottom: 5px;
+}
+
+.icon-left {
+  left: 10px;
+}
+
+.icon-right {
+  right: 10px;
+}

@@ -9,7 +9,6 @@ const Document = (props) => {
         <div className="ui icon header">
           <i className="pd file outline icon"></i>
           <Appone />
-          <i className="sun icon"></i>
         </div>
         <div className="ui primary button">Add Document</div>
       </Placeholder>
