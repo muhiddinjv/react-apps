@@ -14,23 +14,25 @@ const Header = (props) => {
   };
   return (
     <div>
-    <Placeholder>
-      <h3>Current Time: {props.time}</h3>
-      <label className="label" htmlFor="name">
-        Enter name:{" "}
-      </label>
-      <input
-        id="name"
-        type="text"
-        placeholder="type name here"
-        onChange={(e) => setTitle(e.target.value)}
-      />
+      <Placeholder>
+        <div style={{textAlign:"center"}}>
+        <h3>Current Time: {props.time}</h3>
+          <label className="label" htmlFor="name">
+            Enter name:{" "}
+          </label>
+          <input
+            id="name"
+            type="text"
+            placeholder="type name here"
+            onChange={(e) => setTitle(e.target.value)}
+          />
 
-      <button onClick={popup} style={style}>
-        {btnTxt.text}
-        {/* do not use {btnTxt} bc jsx cannot print objects */}
-        {/* use {btnTxt.text} so that jsx can understand it */}
-      </button>
+          <button onClick={popup} style={style}>
+            {btnTxt.text}
+            {/* do not use {btnTxt} bc jsx cannot print objects */}
+            {/* use {btnTxt.text} so that jsx can understand it */}
+          </button>
+        </div>
       </Placeholder>
     </div>
   );
