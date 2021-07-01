@@ -1,5 +1,6 @@
 import React from "react";
 import SeasonDisplay from "./SeasonDisplay";
+import Loading from './Loading'
 
 class Appone extends React.Component {
   //This is the ONLY time we do direct assignment to this.state
@@ -26,15 +27,8 @@ class Appone extends React.Component {
     if (!this.state.errorMsg && this.state.lat) {
       return <SeasonDisplay lat={this.state.lat} />;
     }
-    console.log(this.state.lat);
-    return (
-      <div className="ui segment" style={{ height: "100vh" }}>
-        <div className="ui active dimmer">
-          <div className="ui text loader">Loading</div>
-        </div>
-        <p></p>
-      </div>
-    );
+    // console.log(this.state.lat);
+    return <Loading />
   }
 }
 
