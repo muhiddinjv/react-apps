@@ -28,7 +28,7 @@ class Appone extends React.Component {
       return <SeasonDisplay lat={this.state.lat} />;
     }
     // console.log(this.state.lat);
-    return <Loading text="Allow me to know your location, please!" />
+    return <Loading message="Please accept location request!"/>
   }
 }
 
