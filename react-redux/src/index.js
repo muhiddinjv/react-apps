@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Comment from "./Comment";
-import Header from "./Header";
-import Approval from "./Approval";
-import Message from "./Message";
-import Document from "./Document";
+import Comment from "./comps-0/Comment";
+import Header from "./comps-0/Header";
+import Approval from "./comps-0/Approval";
+import Message from "./comps-0/Message";
+import Document from "./comps-0/Document";
 
 const getTime = () => {
   return new Date().toLocaleTimeString();

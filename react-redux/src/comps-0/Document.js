@@ -1,6 +1,6 @@
 import React from "react";
 import Placeholder from "./Placeholder";
-import Appone from "./lifecycle-1/Appone";
+import Appone from "../lifecycle-1/Appone";
 
 class Document extends React.Component {
   changeLocation(){

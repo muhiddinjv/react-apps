@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Placeholder from "./Placeholder";
-import Clock from "./lifecycle-1/Clock";
+import Clock from "../lifecycle-1/Clock";
 
 const Header = (props) => {
   const [title, setTitle] = useState("");
