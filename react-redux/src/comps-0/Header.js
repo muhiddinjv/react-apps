@@ -16,7 +16,7 @@ const Header = (props) => {
   return (
     <div>
       <Placeholder>
-        <div style={{textAlign:"center"}}>
+        <div>
         <Clock/>
           <label className="label" htmlFor="name">
             Enter name:{" "}

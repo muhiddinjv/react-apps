@@ -5,6 +5,7 @@ import Header from "./comps-0/Header";
 import Approval from "./comps-0/Approval";
 import Message from "./comps-0/Message";
 import Document from "./comps-0/Document";
+import AppTwo from "./events-2/AppTwo";
 
 const getTime = () => {
   return new Date().toLocaleTimeString();
@@ -15,6 +16,7 @@ const App = () => {
     <div className="app">
 
       <div className="ui container comments">
+      <AppTwo/>
       <Header />
         <Document />
         <div className="approval-cards" style={{display:"flex", flexWrap:"wrap"}}>
