@@ -113,6 +113,11 @@ onFormSubmit(e){
             <h4>Class VS Function = this.props</h4>
             <p>The only difference between class based component and a function based component is we use "this" before "props" like this "this.props.whatever"</p>
           </div>
+          <div className="ui segment placeholder">
+            <h4>Axios VS Fetch</h4>
+            <p><b>Axios</b> is a 3rd party package that you can install with npm and has all the necessary codes built in and this is what most developers use.</p>
+            <p><b>Fetch</b> on the other hand is a browser's built-in DIY function which doesn't require any installs but it takes a ton of code to make it work.</p>
+          </div>
         </div>
       )}
     </div>
