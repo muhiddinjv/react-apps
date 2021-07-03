@@ -2,11 +2,11 @@ import React from "react";
 
 class SearchBar extends React.Component {
   // Naming convention: name of ele that u assign callback to (on+ele+event) > onInputChange(e) { console.log(e.target.value) };
-  state = { term: "" };
+  state = { term: '' };
 
-  onFormSubmit(e){
+  onFormSubmit=(e)=>{
     e.preventDefault();
-    console.log(this.state.term);
+    this.props.onSubmit(this.state.term);
   }
 
   render() {
@@ -21,8 +21,8 @@ class SearchBar extends React.Component {
               id="search"
               type="text"
               placeholder="type name here"
-              value={this.state.value}
-              onChange={e => this.setState({term: e.target.event})}
+              value={this.state.term}
+              onChange={e => this.setState({term: e.target.value})}
             />
             {/* Abbreviated syntax: onChange={e => console.log(e.target.value)} */}
             {/* Do NOT put on a set of parantheses whenever you pass a callback function to an event handler. If you do it will work every time the element renders without you clicking it. */}

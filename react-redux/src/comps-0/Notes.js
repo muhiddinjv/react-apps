@@ -7,16 +7,25 @@ import "./Notes.css";
 const Notes = () => {
   const [show, toggleShow] = useState(false);
   const codeString = `class Car {
-    setDriveSound(sound){
-      this.sound = sound;
-    }
-    drive(){
-      return this.sound;
-    }
+  setDriveSound(sound){
+    this.sound = sound;
   }
-  const car = new Car();
-  car.setDriveSound('vroom');
-  car.drive();`;
+  drive(){
+    return this.sound;
+  }
+}
+const car = new Car();
+car.setDriveSound('vroom');
+car.drive();`;
+const codeStringTwo = `
+const drive = car.drive;
+drive();
+`;
+  const codeStringThree = `
+onFormSubmit(e){
+  e.preventDefault();
+  console.log(this.state.term)}
+`;
 
   return (
     <div className="ui segment parent">
@@ -62,18 +71,47 @@ const Notes = () => {
             </p>
             <h4>What is "this" used for in a class?</h4>
             <p>
-              "this" refers to the "SearchBar" class and its properties (e.g
-              state, render, onFormSubmit) in the "SearchBar" component. For
-              example, "this.state" is equal to "SearchBar.state"
+              "this" refers to the "SearchBar" class in the "SearchBar"
+              component. For example, "this.state" is equal to
+              "SearchBar.state". Whenever you want to figure out what the value
+              of "this" is going to be equal to inside of a method on a class,
+              we look at what is to the left of the dot to the left of the
+              function when it gets called. In our case, it is "car". So
+              "this.sound" equals to "car.sound".
             </p>
             {/* Embeded Code: <pre>{`<h1>Hello World</h1>`}</pre> */}
             <SyntaxHighlighter language="javascript" style={tomorrow}>
               {codeString}
               {/* themes: https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism.html */}
             </SyntaxHighlighter>
-
-            <h4>How is the value of "this" determined in a function?</h4>
-            <p>I have no idea for now</p>
+            <p>
+              But what result we will get if we replace car.drive with const
+              drive = car.drive?
+            </p>
+            <SyntaxHighlighter language="javascript" style={tomorrow}>
+              {codeStringTwo}
+            </SyntaxHighlighter>
+            <p>
+              The answer is "cannot read property 'sound' of undefined" b/c
+              there is nothing to the left of "drive();" which means its
+              undefined. Below is a problem to be solved:
+            </p>
+            <SyntaxHighlighter language="javascript" style={tomorrow}>
+              {codeStringThree}
+            </SyntaxHighlighter>
+            <ol><h3>Three Solution:</h3>
+            <li>Long-fix = "constructor"</li>
+            <li>short & sweet-fix = "arrow function" {`(onFormSubmit=(e)=> this.state.term)`}</li>
+            <li>pass arrow function directly into the element like this: {`<form onSubmit={(e)=>this.onFormSubmit(e)}></form>`}</li>
+            </ol>
+          </div>
+          <div className="ui segment placeholder">
+          <h4>Problem: props only go down!</h4>
+            <p>The props system only allows us to pass info from the parent component down to a child. If so, how can we pass info from a child back to the parent?</p>
+            <h4>Solution: functions as props!</h4>
+            <p>You can pass down a function as a prop from the parent down to a child and then pass the info back up to the parent.</p>
+            <h4>Class VS Function = this.props</h4>
+            <p>The only difference between class based component and a function based component is we use "this" before "props" like this "this.props.whatever"</p>
           </div>
         </div>
       )}
