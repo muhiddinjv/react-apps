@@ -10,7 +10,7 @@ class Document extends React.Component {
     return (
       <div>
         <Placeholder>
-          <div className="ui icon header">
+=          <div className="ui icon header">
             <i className="pd file outline icon"></i>
             <Appone />
           </div>

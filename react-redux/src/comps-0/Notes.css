@@ -1,0 +1,11 @@
+.parent{text-align: center;}
+
+.parent .button{margin: 10px;}
+
+.contents{text-align: left;}
+
+img{max-width: 550px;}
+
+pre code {
+    display: block;
+}

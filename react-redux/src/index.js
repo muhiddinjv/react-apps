@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="ui container comments">
-        <Notes />
+        <Notes/>
         <AppTwo />
         <Header />
         <Document />
