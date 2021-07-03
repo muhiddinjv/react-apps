@@ -6,6 +6,7 @@ class SearchBar extends React.Component {
 
   onFormSubmit(e){
     e.preventDefault();
+    // console.log(this.state.term)
   }
 
   render() {
@@ -24,7 +25,7 @@ class SearchBar extends React.Component {
               onChange={e => this.setState({term: e.target.event})}
             />
             {/* Abbreviated syntax: onChange={e => console.log(e.target.value)} */}
-            {/* Do NOT put on a set of parantheses whenever you pass a callback function to an event handler. If you do it will work every time the element render without you clicking it. */}
+            {/* Do NOT put on a set of parantheses whenever you pass a callback function to an event handler. If you do it will work every time the element renders without you clicking it. */}
           </div>
         </form>
       </div>
