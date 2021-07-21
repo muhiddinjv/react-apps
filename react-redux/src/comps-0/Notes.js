@@ -8,24 +8,24 @@ const Notes = () => {
   const [show, toggleShow] = useState(false);
   const codeString = `class Car {
   setDriveSound(sound){
-    this.sound = sound;
+      this.sound = sound;
+    }
+    drive(){
+      return this.sound;
+    }
   }
-  drive(){
-    return this.sound;
-  }
-}
-const car = new Car();
-car.setDriveSound('vroom');
-car.drive();`;
-const codeStringTwo = `
-const drive = car.drive;
-drive();
-`;
+  const car = new Car();
+  car.setDriveSound('vroom');
+  car.drive();`;
+  const codeStringTwo = `
+  const drive = car.drive;
+  drive();
+  `;
   const codeStringThree = `
-onFormSubmit(e){
-  e.preventDefault();
-  console.log(this.state.term)}
-`;
+  onFormSubmit(e){
+    e.preventDefault();
+    console.log(this.state.term)}
+  `;
 
   return (
     <div className="ui segment parent">
@@ -79,7 +79,7 @@ onFormSubmit(e){
               function when it gets called. In our case, it is "car". So
               "this.sound" equals to "car.sound".
             </p>
-            {/* Embeded Code: <pre>{`<h1>Hello World</h1>`}</pre> */}
+            {/* Embeded Code like this: <pre>{`<h1>Hello World</h1>`}</pre> */}
             <SyntaxHighlighter language="javascript" style={tomorrow}>
               {codeString}
               {/* themes: https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism.html */}
@@ -118,6 +118,7 @@ onFormSubmit(e){
             <p><b>Axios</b> is a 3rd party package that you can install with npm and has all the necessary codes built in and this is what most developers use.</p>
             <p><b>Fetch</b> on the other hand is a browser's built-in DIY function which doesn't require any installs but it takes a ton of code to make it work.</p>
           </div>
+          <div className="box">Hello</div>
         </div>
       )}
     </div>
