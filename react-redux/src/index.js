@@ -7,6 +7,10 @@ import Message from "./comps-0/Message";
 import Document from "./comps-0/Document";
 import AppTwo from "./events-2/AppTwo";
 import Notes from "./comps-0/Notes";
+// import {Provider} from 'react-redux';
+// import { createStore } from 'redux';
+
+// const store = createStore();
 
 const getTime = () => {
   return new Date().toLocaleTimeString();
@@ -63,4 +67,8 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(
+  // <Provider store={store}>
+    <App /> ,
+  // </Provider>,
+document.querySelector("#root"));
