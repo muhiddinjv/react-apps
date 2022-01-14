@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 7. Handling User Input with Forms and Events
 
-One of the most important lessons I have learned was:
+One of the most important lessons I have learned was: sth is missing here!
 
 ### `Controlled VS Uncontrolled Elements`
 
