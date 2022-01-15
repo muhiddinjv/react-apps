@@ -51,3 +51,13 @@ const accounting = (bagOfMoney = 100, action) => {
     return bagOfMoney;
   }
 }
+
+const policies = (oldListOfPolicies = [], action) => {
+  if (action.type === 'CREATE_POLICY'){
+    return [...oldListOfPolicies, action.payload.name]
+  } else if (action.type === 'DELETE_POLICY') {
+    return oldListOfPolicies.filter(name => name === action.payload.name ? oldListOfPolicies.delete(name) : [...oldListOfPolicies, name]
+  } else {
+    return oldListOfPolicies;
+  }
+}
