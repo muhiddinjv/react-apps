@@ -23,12 +23,12 @@ const deletePolicy = (name) => {
   };
 };
 
-const createClaim = (name, moneyToGet) => {
+const createClaim = (name, withdraw) => {
   return {
     type: "CREATE_CLAIM",
     payload: {
       name: name,
-      moneyToGet: moneyToGet,
+      withdraw: withdraw,
     },
   };
 };
@@ -49,7 +49,7 @@ const claims = (oldListOfClaims = [], action) => {
 
 const accounting = (bagOfMoney = 100, action) => {
   if (action.type === 'CREATE_CLAIM'){
-    return bagOfMoney - action.payload.moneyToGet
+    return bagOfMoney - action.payload.withdraw
   } else if (action.type === 'CREATE_POLICY') {
     return bagOfMoney + action.payload.amount;
   } else {
@@ -75,9 +75,36 @@ const ourDepartments = combineReducers({
 })
 
 const store = createStore(ourDepartments);
-const action = createPolicy('Muhiddin',20);
 
-store.dispatch(action)
+const clients = [
+  {
+    name: 'Dean',
+    amount: 20,
+  },{
+    name: 'Mike',
+    amount: 40,
+  },{
+    name: 'Lola',
+    amount: 60,
+  },{
+    name: 'Lilly',
+    amount: 80,
+  },{
+    name: 'Don',
+    amount: 100,
+  }
+]
+
+clients.map(client=>{
+  return store.dispatch(createPolicy(client.name, client.amount))
+})
+
+clients.map(client=>{
+  return store.dispatch(createClaim(client.name, client.amount))
+})
+
+store.dispatch(deletePolicy('Dean'))
+
 const dispatched = store.getState()
 
 
