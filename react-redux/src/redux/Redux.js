@@ -1,3 +1,6 @@
+import React, { Component } from 'react'
+import { createStore, combineReducers } from 'redux';
+
 //action creators (customers dropping off forms)
 const createPolicy = (name, amount) => {
   return {
@@ -56,8 +59,33 @@ const policies = (oldListOfPolicies = [], action) => {
   if (action.type === 'CREATE_POLICY'){
     return [...oldListOfPolicies, action.payload.name]
   } else if (action.type === 'DELETE_POLICY') {
-    return oldListOfPolicies.filter(name => name === action.payload.name ? oldListOfPolicies.delete(name) : [...oldListOfPolicies, name]
+    return oldListOfPolicies.filter(name => name !== action.payload.name)
   } else {
     return oldListOfPolicies;
+  }
+}
+
+// all departments
+const ourDepartments = combineReducers({
+  accounting: accounting,
+  claims: claims,
+  policies: policies
+})
+
+
+
+export default class Redux extends Component {
+  redux(){
+    const store = createStore(ourDepartments);
+    console.log("store", store);
+    
+  };
+  render() {
+    return (
+      <div>
+        {this.redux()}
+        redux here!
+      </div>
+    )
   }
 }

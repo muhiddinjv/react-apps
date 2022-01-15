@@ -7,6 +7,7 @@ import Message from "./comps-0/Message";
 import Document from "./comps-0/Document";
 import AppTwo from "./events-2/AppTwo";
 import Notes from "./comps-0/Notes";
+import Redux from './redux/Redux'
 // import {Provider} from 'react-redux';
 // import { createStore } from 'redux';
 
@@ -19,6 +20,7 @@ const getTime = () => {
 const App = () => {
   return (
     <div className="app">
+      <Redux/>
       <div className="ui container comments">
         <Notes/>
         <AppTwo />
@@ -61,6 +63,7 @@ const App = () => {
               time={getTime()}
             />
           </Approval>
+          <Redux/>
         </div>
       </div>
     </div>
