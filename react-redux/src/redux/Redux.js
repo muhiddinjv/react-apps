@@ -4,12 +4,12 @@ import { createStore, combineReducers } from 'redux';
 console.clear();
 
 //action creators (customers dropping off forms)
-const createPolicy = (name, amount) => {
+const createPolicy = (name, deposit) => {
   return {
     type: "CREATE_POLICY",
     payload: {
       name: name,
-      amount: amount,
+      deposit: deposit,
     },
   };
 };
@@ -51,7 +51,7 @@ const accounting = (bagOfMoney = 100, action) => {
   if (action.type === 'CREATE_CLAIM'){
     return bagOfMoney - action.payload.withdraw
   } else if (action.type === 'CREATE_POLICY') {
-    return bagOfMoney + action.payload.amount;
+    return bagOfMoney + action.payload.deposit;
   } else {
     return bagOfMoney;
   }
@@ -69,9 +69,9 @@ const policies = (oldListOfPolicies = [], action) => {
 
 // all departments
 const ourDepartments = combineReducers({
-  accounting: accounting,
   claims: claims,
-  policies: policies
+  policies: policies,
+  accounting: accounting,
 })
 
 const store = createStore(ourDepartments);
@@ -79,32 +79,31 @@ const store = createStore(ourDepartments);
 const clients = [
   {
     name: 'Dean',
-    amount: 20,
+    deposit: 20,
   },{
     name: 'Mike',
-    amount: 40,
+    deposit: 40,
   },{
     name: 'Lola',
-    amount: 60,
+    deposit: 60,
   },{
     name: 'Lilly',
-    amount: 80,
+    deposit: 80,
   },{
     name: 'Don',
-    amount: 100,
+    deposit: 100,
   }
 ]
 
 clients.map(client=>{
-  return store.dispatch(createPolicy(client.name, client.amount))
+  return store.dispatch(createPolicy(client.name, client.deposit))
 })
 
 clients.map(client=>{
-  return store.dispatch(createClaim(client.name, client.amount))
+  return store.dispatch(createClaim(client.name, client.deposit))
 })
 
 store.dispatch(deletePolicy('Dean'))
-
 const dispatched = store.getState()
 
 
