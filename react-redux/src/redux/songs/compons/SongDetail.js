@@ -10,10 +10,14 @@ class SongDetail extends Component {
         return <div>Select a song!</div>;
       } else {
         return (
-          <ul>
-            <li>{song.title}</li>
-            <li>{song.duration}</li>
-          </ul>
+          <div>
+            <h3>Details for:</h3>
+            <p>
+              Title: {song.title}
+              <br/>
+              Duration: {song.duration}
+            </p>
+          </div>
         );
       }
     };

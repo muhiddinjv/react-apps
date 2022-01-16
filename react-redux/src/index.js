@@ -8,10 +8,7 @@ import Document from "./comps-0/Document";
 import AppTwo from "./events-2/AppTwo";
 import Notes from "./comps-0/Notes";
 import SongsIndex from './redux/SongsIndex';
-// import {Provider} from 'react-redux';
-// import { createStore } from 'redux';
 
-// const store = createStore();
 
 const getTime = () => {
   return new Date().toLocaleTimeString();
@@ -20,7 +17,6 @@ const getTime = () => {
 const App = () => {
   return (
     <div className="app">
-      <SongsIndex/>
       <div className="ui container comments">
         <Notes/>
         <AppTwo />
@@ -31,8 +27,6 @@ const App = () => {
           style={{ display: "flex", flexWrap: "wrap" }}
         >
           <Approval>
-            {/* <h4>Warning!</h4>
-            <p>Are you sure?</p> */}
             <Message
               header="Message Component"
               text="this is the text of the 
@@ -47,30 +41,11 @@ const App = () => {
               time="3:00 PM"
             />
           </Approval>
-          <Approval>
-            <Comment
-              author="Rambo"
-              img="img/avatar3.png"
-              text="Killer app!"
-              time={getTime()}
-            />
-          </Approval>
-          <Approval>
-            <Comment
-              author="Lola"
-              img="img/avatar5.png"
-              text="How did u do it?"
-              time={getTime()}
-            />
-          </Approval>
         </div>
       </div>
+      <SongsIndex/>
     </div>
   );
 };
 
-ReactDOM.render(
-  // <Provider store={store}>
-    <App /> ,
-  // </Provider>,
-document.querySelector("#root"));
+ReactDOM.render(<App />,document.querySelector("#root"));
