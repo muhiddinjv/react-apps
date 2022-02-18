@@ -101,7 +101,7 @@ const Notes = () => {
             </SyntaxHighlighter>
             <ol><h3>Three Solution:</h3>
             <li>Long-fix = "constructor"</li>
-            <li>short & sweet-fix = "arrow function" {`(onFormSubmit=(e)=> this.state.term)`}</li>
+            <li>short and sweet-fix = "arrow function" {`(onFormSubmit=(e)=> this.state.term)`}</li>
             <li>pass arrow function directly into the element like this: {`<form onSubmit={(e)=>this.onFormSubmit(e)}></form>`}</li>
             </ol>
           </div>

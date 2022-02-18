@@ -12,11 +12,7 @@ class SongDetail extends Component {
         return (
           <div>
             <h3>Details for:</h3>
-            <p>
-              Title: {song.title}
-              <br/>
-              Duration: {song.duration}
-            </p>
+            <p>Title: {song.title}<br/>Duration: {song.duration}</p>
           </div>
         );
       }

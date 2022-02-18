@@ -10,9 +10,9 @@ import Notes from "./comps-0/Notes";
 import SongsIndex from './redux/SongsIndex';
 
 
-const getTime = () => {
-  return new Date().toLocaleTimeString();
-};
+// const getTime = () => {
+//   return new Date().toLocaleTimeString();
+// };
 
 const App = () => {
   return (
@@ -24,7 +24,7 @@ const App = () => {
         <Document />
         <div
           className="approval-cards"
-          style={{ display: "flex", flexWrap: "wrap" }}
+          style={{ display: 'flex', flexWrap: 'wrap', justifyContent:'space-between' }}
         >
           <Approval>
             <Message
@@ -39,6 +39,22 @@ const App = () => {
               img="img/avatar2.png"
               text="I love this Comment component inside Approval component!"
               time="3:00 PM"
+            />
+          </Approval>
+          <Approval>
+            <Comment
+              author="Bob"
+              img="img/avatar1.png"
+              text="I love my life!"
+              time="5:00 PM"
+            />
+          </Approval>
+          <Approval>
+            <Comment   
+              author="Paul"
+              img="img/avatar3.png"
+              text="I love my life!"
+              time="5:00 PM"
             />
           </Approval>
         </div>
