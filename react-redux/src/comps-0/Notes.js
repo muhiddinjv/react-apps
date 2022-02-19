@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
-import errorImg from "../events-2/img/error.jpg";
+import errorImg from "../Events/img/error.jpg";
+import componentLifecycle from "../Events/img/component-lifecycle.jpg";
+import Placeholder from "./Placeholder";
 import "./Notes.css";
 
 const Notes = () => {
@@ -36,7 +38,7 @@ const Notes = () => {
       {/* Content Shown ---------------------------- */}
       {show && (
         <div className="contents">
-          <div className="ui segment placeholder">
+          <Placeholder>
             <h4 className="ui header">Application Lifecycle</h4>
             <ol>
               <li>JS file loaded by browser</li>
@@ -57,8 +59,8 @@ const Notes = () => {
               <li>Render method returns some (uploaded) JSX</li>
               <li>React takes that JSX and updates content onscreen</li>
             </ol>
-          </div>
-          <div className="ui segment placeholder">
+          </Placeholder>
+          <Placeholder>
             <h3>Most common error in React projects</h3>
             <em>
               Message Rephrase: I cannot access the property state on the value
@@ -104,20 +106,24 @@ const Notes = () => {
             <li>short and sweet-fix = "arrow function" {`(onFormSubmit=(e)=> this.state.term)`}</li>
             <li>pass arrow function directly into the element like this: {`<form onSubmit={(e)=>this.onFormSubmit(e)}></form>`}</li>
             </ol>
-          </div>
-          <div className="ui segment placeholder">
+          </Placeholder>
+          <Placeholder>
           <h4>Problem: props only go down!</h4>
             <p>The props system only allows us to pass info from the parent component down to a child. If so, how can we pass info from a child back to the parent?</p>
             <h4>Solution: functions as props!</h4>
             <p>You can pass down a function as a prop from the parent down to a child and then pass the info back up to the parent.</p>
             <h4>Class VS Function = this.props</h4>
             <p>The only difference between class based component and a function based component is we use "this" before "props" like this "this.props.whatever"</p>
-          </div>
-          <div className="ui segment placeholder">
+            </Placeholder>
+          <Placeholder>
             <h4>Axios VS Fetch</h4>
             <p><b>Axios</b> is a 3rd party package that you can install with npm and has all the necessary codes built in and this is what most developers use.</p>
             <p><b>Fetch</b> on the other hand is a browser's built-in DIY function which doesn't require any installs but it takes a ton of code to make it work.</p>
-          </div>
+            </Placeholder>
+          <Placeholder>
+          <img src={componentLifecycle} alt="error" />
+          </Placeholder>
+
           <div className="box">Hello</div>
         </div>
       )}

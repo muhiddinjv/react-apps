@@ -1,8 +1,8 @@
-import React from "react";
+import React, {Component} from "react";
 import SeasonDisplay from "./SeasonDisplay";
 import Loader from "./Loader";
 
-class Appone extends React.Component {
+class Appone extends Component {
   //This is the ONLY time we do direct assignment to this.state
   state = { lat: null, errorMsg: "" };
   // init state w/o constructor method
