@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
-import errorImg from "../Events/img/error.jpg";
-import componentLifecycle from "../Events/img/component-lifecycle.jpg";
-import Placeholder from "./Placeholder";
-import "./Notes.css";
+import errorImg from "../C-events/img/error.jpg";
+import componentLifecycle from "../C-events/img/component-lifecycle.jpg";
+import Placeholder from "../A-compos/Placeholder";
+import './Notes.css'
 
 const Notes = () => {
   const [show, toggleShow] = useState(false);

@@ -1,8 +1,8 @@
-import React from "react";
+import React, {Component} from "react";
 import Placeholder from "./Placeholder";
-import Appone from "../Lifecycle-1/Appone";
+import GeoLocation from "../Projects/B-season/GeoLocation";
 
-class Document extends React.Component {
+class Document extends Component {
   changeLocation(){
     alert('location was supposed to be changed but it didnt!')
   }
@@ -12,7 +12,7 @@ class Document extends React.Component {
         <Placeholder>
 =          <div className="ui icon header">
             <i className="pd file outline icon"></i>
-            <Appone />
+            <GeoLocation />
           </div>
           <div className="ui primary button" onClick={this.changeLocation}>Add Document</div>
         </Placeholder>

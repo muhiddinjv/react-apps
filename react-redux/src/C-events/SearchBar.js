@@ -1,6 +1,6 @@
-import React from "react";
+import React, {Component} from "react";
 
-class SearchBar extends React.Component {
+class SearchBar extends Component {
   // Naming convention: name of ele that u assign callback to (on+ele+event) > onInputChange(e) { console.log(e.target.value) };
   state = { term: '' };
 

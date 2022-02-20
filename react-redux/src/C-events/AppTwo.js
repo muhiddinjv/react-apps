@@ -1,9 +1,9 @@
-import React from "react";
+import React, {Component} from "react";
 import axios from "axios";
 import SearchBar from "./SearchBar";
-import Placeholder from "../comps-0/Placeholder";
+import Placeholder from "../A-compos/Placeholder";
 
-class AppTwo extends React.Component {
+class AppTwo extends Component {
   onSearchSubmit(term){
     axios.get('https://api.unsplash.com/search/photos',{
       params: { query: term },

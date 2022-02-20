@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SongList from './SongList';
 import SongDetail from './SongDetail';
-import Placeholder from "../../../comps-0/Placeholder";
+import Placeholder from "../../../A-compos/Placeholder";
 
 
 export default class SongsApp extends Component {
@@ -16,7 +16,6 @@ export default class SongsApp extends Component {
           </div>
           <div className="column eight wide">
         <Placeholder>
-            
             <SongDetail/>
         </Placeholder>
           
