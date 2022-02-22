@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import Header from "./A-compos/Header";
 import Message from "./A-compos/Message";
 import Document from "./A-compos/Document";
+import Placeholder from "./A-compos/Placeholder";
 import Notes from "./B-lifecycle/Notes";
-import AppTwo from "./C-events/AppTwo";
+import Pics from "./C-events/Pics";
 import Comment from "./Projects/A-approval/Comment";
 import Approval from "./Projects/A-approval/Approval";
 import SongsIndex from './redux/SongsIndex';
@@ -19,9 +20,9 @@ const App = () => {
     <div className="app">
       <div className="ui container comments">
         <Notes/>
-        <AppTwo />
         <Header />
         <Document />
+        <Placeholder>
         <div
           className="approval-cards"
           style={{ display: 'flex', flexWrap: 'wrap', justifyContent:'space-between' }}
@@ -58,7 +59,10 @@ const App = () => {
             />
           </Approval>
         </div>
+        </Placeholder>
       </div>
+      <Pics />
+
       <SongsIndex/>
     </div>
   );

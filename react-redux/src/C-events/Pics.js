@@ -3,7 +3,7 @@ import axios from "axios";
 import SearchBar from "./SearchBar";
 import Placeholder from "../A-compos/Placeholder";
 
-class AppTwo extends Component {
+class Pics extends Component {
   onSearchSubmit(term){
     axios.get('https://api.unsplash.com/search/photos',{
       params: { query: term },
@@ -26,7 +26,7 @@ class AppTwo extends Component {
   }
 }
 
-export default AppTwo;
+export default Pics;
 
 // Access key: _rKDnAdQlKexqAsytbYe6pr0MbSm5IHs5sMfX2_eABs
 // Secret key: KPTm_69NjcR_acsnu7tURlGci5FzYfUS8MUXoubk4yo
