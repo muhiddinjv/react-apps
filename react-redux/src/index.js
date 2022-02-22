@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Comment from "./Projects/A-approval/Comment";
 import Header from "./A-compos/Header";
-import Approval from "./Projects/A-approval/Approval";
 import Message from "./A-compos/Message";
 import Document from "./A-compos/Document";
-import AppTwo from "./C-events/AppTwo";
 import Notes from "./B-lifecycle/Notes";
+import AppTwo from "./C-events/AppTwo";
+import Comment from "./Projects/A-approval/Comment";
+import Approval from "./Projects/A-approval/Approval";
 import SongsIndex from './redux/SongsIndex';
 
 
