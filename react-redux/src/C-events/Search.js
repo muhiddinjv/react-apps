@@ -7,7 +7,7 @@ class Search extends Component {
   
   onFormSubmit=(e)=>{//Use arrow func to avoid using it in render
     e.preventDefault(); 
-    console.log(this.state.term);
+    // console.log(this.state.term);
     this.props.onSubmit(this.state.term);
   }
 

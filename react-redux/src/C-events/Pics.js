@@ -4,18 +4,22 @@ import Search from "./Search";
 import Placeholder from "../A-compos/Placeholder";
 
 class Pics extends Component {
-  state = {result: ''};
+  state = {allData: ''};
 
   onSearchSubmit(term){
+    console.log(term);
     axios.get('https://api.unsplash.com/search/photos',{
       params: { query: term },
       headers: {
         Authorization: 'Client-ID _rKDnAdQlKexqAsytbYe6pr0MbSm5IHs5sMfX2_eABs'
       },
-    });
+    })
+    .then(response=>this.setState({allData: response.data.results}))
+    .catch(error=>console.error(`Kalla qoydiz boyvachcha: ${error}`)  )
   }
 
   render() {
+    console.log(this.state.allData);
     return (
       <div className="ui container">
         <Placeholder>
