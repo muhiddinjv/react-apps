@@ -14,7 +14,8 @@ class Pics extends Component {
         Authorization: 'Client-ID _rKDnAdQlKexqAsytbYe6pr0MbSm5IHs5sMfX2_eABs'
       },
     })
-    .then(response=>this.setState({allData: response.data.results}))
+    .then(response=>console.log(response.data.results))
+    // .then(response=>this.setState({allData: response.data.results}))
     .catch(error=>console.error(`Kalla qoydiz boyvachcha: ${error}`)  )
   }
 
