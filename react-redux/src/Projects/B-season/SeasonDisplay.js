@@ -28,6 +28,7 @@ const getSeason = (lat, month) => {
 
 const SeasonDisplay = props => {
   const season = getSeason(props.lat, new Date().getMonth());
+  // season = 'summer' or 'winter'
   const { text, iconName } = seasonConfig[season];
 
   return (

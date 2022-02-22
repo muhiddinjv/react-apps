@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
 import errorImg from "../C-events/img/error.jpg";
-import componentLifecycle from "../C-events/img/component-lifecycle.jpg";
+import lifecycle from "../C-events/img/lifecycle.jpg";
 import state from "../C-events/img/state.jpg";
 import Placeholder from "../A-compos/Placeholder";
 import './Notes.css'
@@ -122,9 +122,10 @@ const Notes = () => {
             <p><b>Fetch</b> on the other hand is a browser's built-in DIY function which doesn't require any installs but it takes a ton of code to make it work.</p>
             </Placeholder>
           <Placeholder>
-          <img src={componentLifecycle} alt="life-cycle" />
           <h3>Component State</h3>
           <img src={state} alt="state" />
+          <h3>Component Lifecycle</h3>
+          <img src={lifecycle} alt="life-cycle" />
           </Placeholder>
 
           <div className="box">Hello</div>

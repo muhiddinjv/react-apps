@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import SeasonDisplay from "./SeasonDisplay";
 import Loader from "./Loader";
 
+//SETUP: F12 > 3 dots next "console" below the window > sensors > London
+
 class AGeoLocation extends Component {
   //This is the ONLY time we do direct assignment to this.state
   state = { lat: null, errorMsg: "" };
@@ -23,7 +25,6 @@ class AGeoLocation extends Component {
   renderContent() {// always put conditions in a helper method 
   //like this to wrap everything that comes out of the component
   //with some common element
-
     if (this.state.errorMsg && !this.state.lat) {
       return <div>Error: {this.state.errorMsg}</div>;
     }

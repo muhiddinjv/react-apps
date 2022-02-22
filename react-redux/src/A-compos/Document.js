@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Placeholder from "./Placeholder";
-import GeoLocation from "../Projects/B-season/GeoLocation";
+import AGeoLocation from "../Projects/B-season/AGeoLocation";
 
 class Document extends Component {
   changeLocation(){
@@ -10,9 +10,9 @@ class Document extends Component {
     return (
       <div>
         <Placeholder>
-=          <div className="ui icon header">
-            <i className="pd file outline icon"></i>
-            <GeoLocation />
+          <div className="ui icon header">
+            <i className="pd file outline icon" />
+            <AGeoLocation />
           </div>
           <div className="ui primary button" onClick={this.changeLocation}>Add Document</div>
         </Placeholder>
