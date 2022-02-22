@@ -10,11 +10,6 @@ import Comment from "./Projects/A-approval/Comment";
 import Approval from "./Projects/A-approval/Approval";
 import SongsIndex from './redux/SongsIndex';
 
-
-// const getTime = () => {
-//   return new Date().toLocaleTimeString();
-// };
-
 const App = () => {
   return (
     <div className="app">
@@ -22,6 +17,7 @@ const App = () => {
         <Notes/>
         <Header />
         <Document />
+        <Pics />
         <Placeholder>
         <div
           className="approval-cards"
@@ -61,8 +57,6 @@ const App = () => {
         </div>
         </Placeholder>
       </div>
-      <Pics />
-
       <SongsIndex/>
     </div>
   );

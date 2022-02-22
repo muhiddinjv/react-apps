@@ -1,15 +1,18 @@
 import React, {Component} from "react";
 
-class SearchBar extends Component {
+class Search extends Component {
   // Naming convention: name of ele that u assign callback to (on+ele+event) > onInputChange(e) { console.log(e.target.value) };
   state = { term: '' };
 
-  onFormSubmit=(e)=>{
-    e.preventDefault();
+  
+  onFormSubmit=(e)=>{//Use arrow func to avoid using it in render
+    e.preventDefault(); 
+    console.log(this.state.term);
     this.props.onSubmit(this.state.term);
   }
 
   render() {
+    console.log(this.state.term);
     return (
       <div className="ui segment">
         <form onSubmit={this.onFormSubmit} className="ui form">
@@ -33,4 +36,4 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar;
+export default Search;

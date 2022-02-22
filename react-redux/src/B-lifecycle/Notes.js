@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
-import errorImg from "../C-events/img/error.jpg";
-import lifecycle from "../C-events/img/lifecycle.jpg";
-import state from "../C-events/img/state.jpg";
+
+import errorImg from "../images/error.jpg";
+import lifecycle from "../images/lifecycle.jpg";
+import state from "../images/state.jpg";
+import controlled from "../images/controlled.jpg";
+import uncontrolled from "../images/uncontrolled.jpg";
+
 import Placeholder from "../A-compos/Placeholder";
 import './Notes.css'
 
@@ -40,6 +44,14 @@ const Notes = () => {
       {show && (
         <div className="contents">
           <Placeholder>
+          <h4>Problem: props only go down!</h4>
+            <p>The props system only allows us to pass info from the parent component down to a child. If so, how can we pass info from a child back to the parent?</p>
+            <h4>Solution: functions as props!</h4>
+            <p>You can pass down a function as a prop from the parent down to a child and then pass the info back up to the parent.</p>
+            <h4>Class VS Function = this.props</h4>
+            <p>The only difference between class based component and a function based component is we use "this" before "props" like this "this.props.whatever"</p>
+            </Placeholder>
+            <Placeholder>
             <h4 className="ui header">Application Lifecycle</h4>
             <ol>
               <li>JS file loaded by browser</li>
@@ -60,6 +72,26 @@ const Notes = () => {
               <li>Render method returns some (uploaded) JSX</li>
               <li>React takes that JSX and updates content onscreen</li>
             </ol>
+          </Placeholder>
+          <Placeholder>
+            <h3>Component State</h3>
+            <img src={state} alt="state" />
+            <h3>Component Lifecycle</h3>
+            <img src={lifecycle} alt="life-cycle" />
+          </Placeholder>
+          <Placeholder>
+            <h3>Uncontrolled VS Controlled </h3>
+            <h4>Uncontrolled Component = data stored in DOM</h4>
+            <i>
+              The only way to figure out what the input of the element is to find it in the DOM and look at its value. As a developer, we don't like to store data inside of HTML elements. Instead, we want to centralize all of the data inside of our react component.
+            </i>
+            <img src={uncontrolled} alt="uncontrolled-component" />
+            <h4>Controlled Component = data stored in Component</h4>
+            <i>
+              If you want to change the input value is, you can simply look at the "state" without having to dive into the DOM to find the input's value.
+            </i>
+            <img src={controlled} alt="controlled-component" />
+
           </Placeholder>
           <Placeholder>
             <h3>Most common error in React projects</h3>
@@ -108,25 +140,13 @@ const Notes = () => {
             <li>pass arrow function directly into the element like this: {`<form onSubmit={(e)=>this.onFormSubmit(e)}></form>`}</li>
             </ol>
           </Placeholder>
-          <Placeholder>
-          <h4>Problem: props only go down!</h4>
-            <p>The props system only allows us to pass info from the parent component down to a child. If so, how can we pass info from a child back to the parent?</p>
-            <h4>Solution: functions as props!</h4>
-            <p>You can pass down a function as a prop from the parent down to a child and then pass the info back up to the parent.</p>
-            <h4>Class VS Function = this.props</h4>
-            <p>The only difference between class based component and a function based component is we use "this" before "props" like this "this.props.whatever"</p>
-            </Placeholder>
+
           <Placeholder>
             <h4>Axios VS Fetch</h4>
             <p><b>Axios</b> is a 3rd party package that you can install with npm and has all the necessary codes built in and this is what most developers use.</p>
             <p><b>Fetch</b> on the other hand is a browser's built-in DIY function which doesn't require any installs but it takes a ton of code to make it work.</p>
             </Placeholder>
-          <Placeholder>
-          <h3>Component State</h3>
-          <img src={state} alt="state" />
-          <h3>Component Lifecycle</h3>
-          <img src={lifecycle} alt="life-cycle" />
-          </Placeholder>
+          
 
           <div className="box">Hello</div>
         </div>
