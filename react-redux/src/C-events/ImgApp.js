@@ -15,7 +15,6 @@ class ImgApp extends Component {
   }
 
   render() {
-    console.log(this.state.images);
     return (
       <div className="ui container">
         <Placeholder>
