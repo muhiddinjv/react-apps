@@ -7,6 +7,10 @@ import lifecycle from "../images/lifecycle.jpg";
 import state from "../images/state.jpg";
 import controlled from "../images/controlled.jpg";
 import uncontrolled from "../images/uncontrolled.jpg";
+import thisCode from "../images/thisCode.jpg";
+import thisThis from "../images/this.jpg";
+import thisError from "../images/thisError.jpg";
+import solution from "../images/solution.jpg";
 
 import Placeholder from "../A-compos/Placeholder";
 import './Notes.css'
@@ -110,8 +114,8 @@ const Notes = () => {
               component. For example, "this.state" is equal to
               "SearchBar.state". Whenever you want to figure out what the value
               of "this" is going to be equal to inside of a method on a class,
-              we look at what is to the left of the dot to the left of the
-              function when it gets called. In our case, it is "car". So
+              we look at what is <strong>to the left of the dot to the left of the
+              function</strong> when it gets called. In our case, it is "car". So
               "this.sound" equals to "car.sound".
             </p>
             {/* Embeded Code like this: <pre>{`<h1>Hello World</h1>`}</pre> */}
@@ -134,11 +138,24 @@ const Notes = () => {
             <SyntaxHighlighter language="javascript" style={tomorrow}>
               {codeStringThree}
             </SyntaxHighlighter>
-            <ol><h3>Three Solution:</h3>
-            <li>Long-fix = "constructor"</li>
-            <li>short and sweet-fix = "arrow function" {`(onFormSubmit=(e)=> this.state.term)`}</li>
-            <li>pass arrow function directly into the element like this: {`<form onSubmit={(e)=>this.onFormSubmit(e)}></form>`}</li>
-            </ol>
+            <div>
+              <h3>Real Life Example of THIS Causing an Error</h3>
+              <p>In the pic below, "this.setState" caused an error. </p>
+              <img src={thisCode} alt="this" />
+              <p>below is where the function onSearchSubmit coming from. Here "this" refers to <strong>"props"</strong> b/c it's to the left of the dot on the left of the function</p>
+              <img src={thisThis} alt="this" />
+              <p>"this.setState is not a function" is the error that "this" caused</p>
+              <img src={thisError} alt="this-error" />
+              
+            </div>
+            <div>
+              <ol><h3>Three Solution:</h3>
+              <li>Long-fix = "constructor"</li>
+              <li>short and sweet-fix = "arrow function" {`(onFormSubmit=(e)=> this.state.term)`}</li>
+              <li>pass arrow function directly into the element like this: {`<form onSubmit={(e)=>this.onFormSubmit(e)}></form>`}</li>
+              </ol>
+            </div>
+            <img src={solution} alt="solution" />
           </Placeholder>
 
           <Placeholder>

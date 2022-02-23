@@ -1,32 +1,34 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import Search from "./Search";
 import Placeholder from "../A-compos/Placeholder";
 
 class Pics extends Component {
-  state = {allData: ''};
+  state = { images: [] }; //if it holds array, default it to array
+  // so that you won't get an error if you map it
 
-  onSearchSubmit(term){
+  onSearchSubmit = async (term) => {
     console.log(term);
-    axios.get('https://api.unsplash.com/search/photos',{
-      params: { query: term },
-      headers: {
-        Authorization: 'Client-ID _rKDnAdQlKexqAsytbYe6pr0MbSm5IHs5sMfX2_eABs'
-      },
-    })
-    .then(response=>console.log(response.data.results))
-    // .then(response=>this.setState({allData: response.data.results}))
-    .catch(error=>console.error(`Kalla qoydiz boyvachcha: ${error}`)  )
+    const response = await axios
+      .get("https://api.unsplash.com/search/photos", {
+        params: { query: term },
+        headers: {
+          Authorization:
+            "Client-ID _rKDnAdQlKexqAsytbYe6pr0MbSm5IHs5sMfX2_eABs",
+        },
+      })
+      this.setState({images: response.data.results})
   }
 
   render() {
-    console.log(this.state.allData);
+    console.log(this.state.images);
     return (
       <div className="ui container">
         <Placeholder>
           <Search onSubmit={this.onSearchSubmit} />
           {/* you can write "cocaCola" instead of "onSubmit" but*/}
           {/* You cannot do the same on a JSX element e.g.<form> */}
+          Found: {this.state.images.length} images
         </Placeholder>
       </div>
     );
