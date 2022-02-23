@@ -5,7 +5,7 @@ import Message from "./A-compos/Message";
 import Document from "./A-compos/Document";
 import Placeholder from "./A-compos/Placeholder";
 import Notes from "./B-lifecycle/Notes";
-import Pics from "./C-events/Pics";
+import ImgApp from "./C-events/ImgApp";
 import Comment from "./Projects/A-approval/Comment";
 import Approval from "./Projects/A-approval/Approval";
 import SongsIndex from './redux/SongsIndex';
@@ -17,7 +17,7 @@ const App = () => {
         <Notes/>
         <Header />
         <Document />
-        <Pics />
+        <ImgApp />
         <Placeholder>
         <div
           className="approval-cards"
