@@ -17,7 +17,6 @@ const App = () => {
         <Notes/>
         <Header />
         <Document />
-        <ImgApp />
         <Placeholder>
         <div
           className="approval-cards"
@@ -57,7 +56,10 @@ const App = () => {
         </div>
         </Placeholder>
       </div>
+      <ImgApp />
+
       <SongsIndex/>
+
     </div>
   );
 };
