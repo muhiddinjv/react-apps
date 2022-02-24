@@ -4,7 +4,7 @@ import SearchBar from './SearchBar'
 export default class VideoApp extends Component {
   render() {
     return (
-      <div>
+      <div className='ui container'>
           <SearchBar />
       </div>
     )
