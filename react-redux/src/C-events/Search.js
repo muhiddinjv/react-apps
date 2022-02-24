@@ -7,7 +7,7 @@ class Search extends Component {
   
   onFormSubmit=(e)=>{//Use arrow func to avoid "this undefined" errors
     e.preventDefault(); 
-    this.props.onSubmit(this.state.term);
+    this.props.onSubmit(this.state.term); 
   }
 
   render() {
