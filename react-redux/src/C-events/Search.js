@@ -5,14 +5,12 @@ class Search extends Component {
   state = { term: '' };
 
   
-  onFormSubmit=(e)=>{//Use arrow func to avoid using it in render
+  onFormSubmit=(e)=>{//Use arrow func to avoid "this undefined" errors
     e.preventDefault(); 
-    // console.log(this.state.term);
     this.props.onSubmit(this.state.term);
   }
 
   render() {
-    console.log(this.state.term);
     return (
       <div className="ui segment">
         <form onSubmit={this.onFormSubmit} className="ui form">

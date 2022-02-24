@@ -12,8 +12,8 @@ export default class ImgCard extends Component {
   
   setSpans = () => {
     const height = this.imageRef.current.clientHeight;
-    const spans = Math.ceil(height / 10); // 150 = grid.auto.rows in ImgList.css
-    this.setState({spans})
+    const spans = Math.ceil(height / 10); // 10 = grid.auto.rows in ImgList.css
+    this.setState({spans}) // spans = spans: spans
   }
 
   render() {

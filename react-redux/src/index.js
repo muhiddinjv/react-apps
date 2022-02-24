@@ -57,9 +57,7 @@ const App = () => {
         </Placeholder>
       </div>
       <ImgApp />
-
       <SongsIndex/>
-
     </div>
   );
 };
