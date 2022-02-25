@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
+// import { Routes, Route } from "react-router-dom";
+// import { NavLink } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
-import youtube from '../api/youtube'
+import youtube from '../../Api/youtube'
 
-export default class VideoApp extends Component {
+//<NavLink className="link" to="/">women</NavLink>
+
+
+export default class VidApp extends Component {
   state = { videos: [], selectedVideo: null }
+
+  componentDidMount(){
+    this.onTermSubmit('stories');
+  }
 
   onTermSubmit = async (term) => {
     const response = await youtube.get('/search',{
       params: { q: term }
     })
-    this.setState({videos: response.data.items})
+    this.setState({
+      videos: response.data.items,
+      selectedVideo: response.data.items[0]
+    })
   }
 
   onVideoSelect = video => {
@@ -20,7 +32,7 @@ export default class VideoApp extends Component {
   }
   render() {
     return (
-      <div className='ui container'>
+      <div>
           <SearchBar onTermSubmit={this.onTermSubmit}/>
           <div className="ui grid">
             <div className="ui row">
