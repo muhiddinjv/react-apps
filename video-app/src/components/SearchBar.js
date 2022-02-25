@@ -10,7 +10,7 @@ export default class SearchBar extends Component {
   onFormSubmit = e => {
     e.preventDefault();
     //TODO: make sure we call callback from parent component
-    // AIzaSyD_3bNG8gRcqIFs9hUgxDHlpKivwe9xAS0 YOUTUBE API KEY
+    this.props.onTermSubmit(this.state.term)
   }
 
   render() {
