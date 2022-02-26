@@ -1,5 +1,5 @@
 import React from 'react';
-import './VideoItem.css'
+import './VidItem.css'
 
 const VideoItem = ({ video, onVideoSelect }) => {
     const {title, thumbnails} = video.snippet

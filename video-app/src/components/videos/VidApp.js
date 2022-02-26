@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import VideoList from "./VideoList";
-import VideoDetail from "./VideoDetail";
+import VidList from "./VidList";
+import VidDetail from "./VidDetail";
 
 export default class VidApp extends Component {
   render() {
@@ -8,10 +8,10 @@ export default class VidApp extends Component {
       <div className="ui grid">
         <div className="ui row">
           <div className="eleven wide column">
-            <VideoDetail video={this.props.selectedVideo} />
+            <VidDetail video={this.props.selectedVideo} />
           </div>
           <div className="five wide column">
-            <VideoList
+            <VidList
               onVideoSelect={this.props.onVideoSelect}
               videos={this.props.videos}
             />

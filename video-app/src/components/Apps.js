@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Routes, Route } from "react-router-dom";
-import { VideoApp, ImgApp, Navbar, youtube, unsplash } from "./index";
+import { VidApp, ImgApp, Navbar, youtube, unsplash } from "./index";
 
 export default class Apps extends Component {  
   state = { videos: [], selectedVideo: null, images: [] }
@@ -38,7 +38,7 @@ export default class Apps extends Component {
           />
 
           <Routes>
-            <Route exact path="/" element={<VideoApp 
+            <Route exact path="/" element={<VidApp 
               onVideoSelect={this.onVideoSelect}
               selectedVideo={this.state.selectedVideo}
               videos={this.state.videos}
