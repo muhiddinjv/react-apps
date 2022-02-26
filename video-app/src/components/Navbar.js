@@ -7,14 +7,20 @@ export default class Navbar extends Component {
 
   onNavbarClick = term => {
     if (term === 'videos'){
-      this.setState({searchBar: <SearchBar onVideoTermSubmit={this.props.onVideoTermSubmit} term={term} />})
+      this.setState({searchBar: <SearchBar 
+        onVideoTermSubmit={this.props.onVideoTermSubmit} 
+        term={term} 
+      />})
     } else {
-      this.setState({searchBar: <SearchBar onImageTermSubmit={this.props.onImageTermSubmit} term={term} />}) 
+      this.setState({searchBar: <SearchBar 
+        onImageTermSubmit={this.props.onImageTermSubmit} 
+        term={term} 
+      />}) 
     }
   };
 
   render() {
-    return ( // try adding "fixed" to className
+    return ( // try adding "fixed" to nav className
         <nav className="ui pointing menu" style={{marginTop:'10px'}}>
         <NavLink className="item" to="/" onClick={()=>this.onNavbarClick('videos')}>
           videos
