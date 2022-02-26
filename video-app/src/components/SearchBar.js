@@ -9,12 +9,12 @@ export default class SearchBar extends Component {
 
   onFormSubmit = (e) => {
     e.preventDefault();
-    const { term, onSearchSubmit, onTermSubmit } = this.props;
-    
+    const { term, onImageTermSubmit, onVideoTermSubmit } = this.props;
+
     if (term === 'images'){
-      onSearchSubmit(this.state.term);
+      onImageTermSubmit(this.state.term);
     } else {
-      onTermSubmit(this.state.term)
+      onVideoTermSubmit(this.state.term)
     }
   };
 
