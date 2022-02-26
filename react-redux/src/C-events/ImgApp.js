@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import unsplash from "../api/unsplash";
+import unsplash from "../Api/unsplash";
 import Search from "./Search";
 import ImgList from "./ImgList";
 import Placeholder from "../A-compos/Placeholder";
