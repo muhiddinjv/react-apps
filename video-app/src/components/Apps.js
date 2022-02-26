@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import { Routes, Route } from "react-router-dom";
-import VideoApp from './videos/VideoApp';
-import ImgApp from './images/ImgApp';
-import Navbar from './Navbar';
-import youtube from '../Api/youtube';
-import unsplash from "../Api/unsplash";
+import { VideoApp, ImgApp, Navbar, youtube, unsplash } from "./index";
 
 export default class Apps extends Component {  
   state = { videos: [], selectedVideo: null, images: [] }
