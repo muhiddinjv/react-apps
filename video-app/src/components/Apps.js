@@ -20,7 +20,6 @@ export default class Apps extends Component {
   }
 
   onVideoSelect = video => {
-    console.log('From App: ', video);
     this.setState({selectedVideo: video})
   }
 
