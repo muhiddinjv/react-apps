@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SongList from './SongList';
 import SongDetail from './SongDetail';
-import Placeholder from "../../../A-compos/Placeholder";
+import Placeholder from "../../../../A-compos/Placeholder";
 
 
 export default class SongsApp extends Component {

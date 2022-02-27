@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Placeholder from "./Placeholder";
-import AGeoLocation from "../Projects/B-season/AGeoLocation";
+import AGeoLocation from "../B-lifecycle/season/AGeoLocation";
 
 class Document extends Component {
   changeLocation(){

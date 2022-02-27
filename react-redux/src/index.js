@@ -6,10 +6,9 @@ import Document from "./A-compos/Document";
 import Placeholder from "./A-compos/Placeholder";
 import Notes from "./B-lifecycle/Notes";
 import ImgApp from "./C-events/ImgApp";
-import Comment from "./Projects/A-approval/Comment";
-import Approval from "./Projects/A-approval/Approval";
-import SongsIndex from './redux/SongsIndex';
-import VideoApp from './D-videos/VideoApp';
+import Comment from "./A-compos/approval/Comment";
+import Approval from "./A-compos/approval/Approval";
+import SongsIndex from './D-redux/music/SongsIndex';
 
 const App = () => {
   return (
@@ -59,7 +58,6 @@ const App = () => {
       </div>
       <ImgApp />
       <SongsIndex/>
-      <VideoApp />
     </div>
   );
 };
