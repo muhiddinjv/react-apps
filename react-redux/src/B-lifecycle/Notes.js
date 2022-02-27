@@ -3,6 +3,8 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import errorImg from "../images/error.jpg";
+import error2 from "../images/error2.jpg";
+import wrongFetch from "../images/wrong-fetch.jpg";
 import lifecycle from "../images/lifecycle.jpg";
 import state from "../images/state.jpg";
 import controlled from "../images/controlled.jpg";
@@ -11,6 +13,17 @@ import thisCode from "../images/thisCode.jpg";
 import thisThis from "../images/this.jpg";
 import thisError from "../images/thisError.jpg";
 import solution from "../images/solution.jpg";
+import fetchData from "../images/fetchData.jpg";
+import babelAsync from "../images/babelAsync.jpg";
+import fetchInAction from "../images/fetchInAction.jpg";
+import causeOfError from "../images/causeOfError.jpg";
+import reduxCycle from "../images/reduxCycle.jpg";
+import reduxStages from "../images/reduxStages.jpg";
+import reduxFastFetchNot from "../images/reduxFastFetchNot.jpg";
+import syncVsAsync from "../images/syncVsAsync.jpg";
+import middleware from "../images/middleware.jpg";
+import reduxMiddleware from "../images/reduxMiddleware.jpg";
+import middlewareInRedux from "../images/middlewareInRedux.jpg";
 
 import Placeholder from "../A-compos/Placeholder";
 import './Notes.css'
@@ -162,6 +175,29 @@ const Notes = () => {
             <h4>Axios VS Fetch</h4>
             <p><b>Axios</b> is a 3rd party package that you can install with npm and has all the necessary codes built in and this is what most developers use.</p>
             <p><b>Fetch</b> on the other hand is a browser's built-in DIY function which doesn't require any installs but it takes a ton of code to make it work.</p>
+            </Placeholder>
+
+            <Placeholder>
+             <img src={fetchData} alt="fetchData" />
+             <img src={error2} alt="error 2" />
+             <img src={wrongFetch} alt="wrong-fetch" />
+             <h4>Babel converts async to a super large ES2015 code...</h4>
+             <img src={babelAsync} alt="babel-async-error" />
+             <h4>You think this is what's happening</h4>
+             <img src={fetchInAction} alt="fetch-in-action" />
+             <h4>But look below to see what's happening</h4>
+             <img src={causeOfError} alt="cause-of-error" />
+             <img src={reduxCycle} alt="redux-cycle" />
+             <h4>By the time, our action gets to a reducer, we won't have fetched our data!</h4>
+             <img src={reduxStages} alt="redux-stages" />
+             <h4>redux action reaches reducers way before we get any data from the API</h4>
+             <img src={reduxFastFetchNot} alt="redux-works-fast-fetch-doesn't" />
+             <h4>Therefore, we cannot use promises either b/c they take time too</h4>
+             <img src={syncVsAsync} alt="synchronous-vs-asynchronous" />
+             <img src={middleware} alt="middleware" />
+             <img src={reduxMiddleware} alt="redux-middleware" />
+             <img src={middlewareInRedux} alt="middleware-in-redux" />
+
             </Placeholder>
           
 

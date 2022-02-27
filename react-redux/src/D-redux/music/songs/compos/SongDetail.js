@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import { selectedSong } from '../reducers';
 
 class SongDetail extends Component {
   render() {

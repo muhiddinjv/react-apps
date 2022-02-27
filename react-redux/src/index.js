@@ -9,6 +9,7 @@ import ImgApp from "./C-events/ImgApp";
 import Comment from "./A-compos/approval/Comment";
 import Approval from "./A-compos/approval/Approval";
 import SongsIndex from './D-redux/music/SongsIndex';
+import PostApp from './D-redux/posts/PostApp';
 
 const App = () => {
   return (
@@ -58,6 +59,7 @@ const App = () => {
       </div>
       <ImgApp />
       <SongsIndex/>
+      <PostApp/>
     </div>
   );
 };
