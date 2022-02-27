@@ -1,7 +1,7 @@
 import React from 'react';
 import './VidItem.css'
 
-const VideoItem = ({ video, onVideoSelect }) => {
+const VidItem = ({ video, onVideoSelect }) => {
     const {title, thumbnails} = video.snippet
     // const {title, thumbnails, description} = video.snippet
   return (
@@ -15,4 +15,4 @@ const VideoItem = ({ video, onVideoSelect }) => {
   )
 }
 
-export default VideoItem
+export default VidItem
