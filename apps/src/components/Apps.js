@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Routes, Route } from "react-router-dom";
-import { VidApp, ImgApp, Navbar, youtube, unsplash } from "./index";
+import { VidApp, ImgApp, PostApp, Navbar, youtube, unsplash } from "./index";
 
 export default class Apps extends Component {  
   state = { videos: [], selectedVideo: null, images: [] }
@@ -47,6 +47,8 @@ export default class Apps extends Component {
             <Route path="/images" element={<ImgApp 
               images={this.state.images}
             />} />
+
+            <Route path="/posts" element={<PostApp />}/>
           </Routes>
       </main>
     );

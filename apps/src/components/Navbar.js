@@ -28,6 +28,9 @@ export default class Navbar extends Component {
         <NavLink className="item" to="/images" onClick={()=>this.onNavbarClick('images')}>
           images
         </NavLink>
+        <NavLink className="item" to="/posts">
+          posts
+        </NavLink>
         <div className="right menu">{this.state.searchBar}</div>
       </nav>
     );
