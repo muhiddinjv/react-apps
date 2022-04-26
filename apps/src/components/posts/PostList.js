@@ -1,20 +1,35 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../redux/actions';
-import reduxDataLoad from '../../assets/dataLoadRedux.jpg';
+import dataLoadRedux from '../../assets/dataLoadRedux.jpg';
+import rulesOfReducers from '../../assets/rulesOfReducers.jpg';
+import dontMutateState from '../../assets/dontMutateState.jpg';
+import uCanMutateState from '../../assets/uCanMutateState.jpg';
+import howToUpdateState from '../../assets/howToUpdateState.jpg';
 
 class PostList extends Component {
   componentDidMount(){
       this.props.fetchPosts();
   }
   render() {
+    console.log(this.props.posts);
     return (
       <div>
           <h1>Post List</h1>
-          <img style={{width:'500px'}} src={reduxDataLoad} alt="redux-data-load"/>
+          <img style={{width:'500px'}} src={dataLoadRedux} alt="redux-data-load"/>
+          <div style={{display:'flex', flexWrap:'wrap', width:'600px'}}>
+            <img src={rulesOfReducers} style={{width:'300px'}} alt="rules-of-reducers"/>
+            <img src={dontMutateState} style={{width:'300px'}} alt="dont-mutate-state"/> 
+            <img src={uCanMutateState} style={{width:'300px'}} alt="dont-mutate-state"/>
+            <img src={howToUpdateState} style={{width:'300px'}} alt="dont-mutate-state"/>
+          </div>         
       </div>
     )
   }
 }
 
-export default connect(null, {fetchPosts})(PostList);
+const mapStateToProps = (state) => {
+  return { posts: state.posts }
+}
+
+export default connect(mapStateToProps, {fetchPosts})(PostList);
