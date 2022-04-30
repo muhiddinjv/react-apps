@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import UserHeader from './UserHeader';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../redux/actions';
 import dataLoadRedux from '../../assets/dataLoadRedux.jpg';
@@ -6,8 +7,9 @@ import rulesOfReducers from '../../assets/rulesOfReducers.jpg';
 import dontMutateState from '../../assets/dontMutateState.jpg';
 import uCanMutateState from '../../assets/uCanMutateState.jpg';
 import howToUpdateState from '../../assets/howToUpdateState.jpg';
+import fetchPost from '../../assets/fetchPosts.jpg';
 
-const images = [dataLoadRedux, rulesOfReducers, dontMutateState, uCanMutateState, howToUpdateState]
+const images = [dataLoadRedux, rulesOfReducers, dontMutateState, uCanMutateState, howToUpdateState, fetchPost]
 
 class PostList extends Component {
   state = {showImages: false, showList: false,};
@@ -27,8 +29,8 @@ class PostList extends Component {
               <p>{post.body}</p>
             </div>
           </div>
-        </div>
-      )
+          <UserHeader userId={post.userId} />
+        </div>)
     })
   }
   showList = () => {
@@ -45,7 +47,7 @@ class PostList extends Component {
           <div className="list">
             <button onClick={this.showImages}>{ this.state.showImages ? 'hide' : 'show'} images</button>
             <div style={{display: this.state.showImages ? 'flex' : 'none', flexWrap:'wrap', gap:'20px'}}>
-              {images.map(img => <img src={img} style={{width:'300px'}} alt="" srcset="" />)}
+              {images.map(img => <img src={img} style={{width:'300px', border:'1px solid #999', padding:'10px'}} alt="" srcset="" />)}
             </div>   
           </div>   
           <div className="ui relaxed divided list">
