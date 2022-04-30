@@ -7,12 +7,15 @@ import dontMutateState from '../../assets/dontMutateState.jpg';
 import uCanMutateState from '../../assets/uCanMutateState.jpg';
 import howToUpdateState from '../../assets/howToUpdateState.jpg';
 
+const images = [dataLoadRedux, rulesOfReducers, dontMutateState, uCanMutateState, howToUpdateState]
+
 class PostList extends Component {
   state = {showImages: false, showList: false,};
 
   componentDidMount(){
-      this.props.fetchPosts();
+    this.props.fetchPosts();
   }
+
   renderList() {
     return this.props.posts.map(post => {
       return (
@@ -40,17 +43,13 @@ class PostList extends Component {
       <div>
           <h1>Post List</h1>
           <div className="list">
-            <button onClick={this.showImages}>show images</button>
+            <button onClick={this.showImages}>{ this.state.showImages ? 'hide' : 'show'} images</button>
             <div style={{display: this.state.showImages ? 'flex' : 'none', flexWrap:'wrap', gap:'20px'}}>
-              <img style={{width:'300px'}} src={dataLoadRedux} alt="redux-data-load"/>
-              <img src={rulesOfReducers} style={{width:'300px'}} alt="rules-of-reducers"/>
-              <img src={dontMutateState} style={{width:'300px'}} alt="dont-mutate-state"/> 
-              <img src={uCanMutateState} style={{width:'300px'}} alt="can-mutate-state"/>
-              <img src={howToUpdateState} style={{width:'300px'}} alt="how2-mutate-state"/>
+              {images.map(img => <img src={img} style={{width:'300px'}} alt="" srcset="" />)}
             </div>   
           </div>   
           <div className="ui relaxed divided list">
-            <button onClick={this.showList}>show list</button>
+            <button onClick={this.showList}>{ this.state.showList ? 'hide' : 'show'} list</button>
             {this.renderList()}
           </div>
       </div>
