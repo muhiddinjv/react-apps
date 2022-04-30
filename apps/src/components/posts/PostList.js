@@ -12,14 +12,9 @@ class PostList extends Component {
       this.props.fetchPosts();
   }
   renderList() {
-    // for (const post of this.props.posts) {
-    //   return <div>{post.title}</div>
-    // }
-    this.props.fetchPosts();
-    this.props.posts.map(post => {
+    return this.props.posts.map(post => {
       return (
         <div className="item" key={post.id}>
-          <h1>hi</h1>
           <i className="large middle aligned icon user" />
           <div className="content">
             <div className="description">
@@ -32,7 +27,6 @@ class PostList extends Component {
     })
   }
   render() {
-    console.log(this.props.posts);
     return (
       <div>
           <h1>Post List</h1>
@@ -43,8 +37,7 @@ class PostList extends Component {
             <img src={uCanMutateState} style={{width:'300px'}} alt="can-mutate-state"/>
             <img src={howToUpdateState} style={{width:'300px'}} alt="how2-mutate-state"/>
           </div>    
-          <div className="ui relaxed divided list" style={{border:'1px solid #999'}}>
-            <p>hi</p>
+          <div className="ui relaxed divided list">
             {this.renderList()}
           </div>
       </div>
@@ -56,4 +49,4 @@ const mapStateToProps = (state) => {
   return { posts: state.posts }
 }
 
-export default connect(mapStateToProps, {fetchPosts})(PostList);
+export default connect(mapStateToProps, { fetchPosts })(PostList);
