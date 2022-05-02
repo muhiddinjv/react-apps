@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import UserHeader from './UserHeader';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../../redux/actions';
+import { fetchPostsAndUsers } from '../../redux/actions';
 import dataLoadRedux from '../../assets/dataLoadRedux.jpg';
 import rulesOfReducers from '../../assets/rulesOfReducers.jpg';
 import dontMutateState from '../../assets/dontMutateState.jpg';
@@ -9,13 +9,13 @@ import uCanMutateState from '../../assets/uCanMutateState.jpg';
 import howToUpdateState from '../../assets/howToUpdateState.jpg';
 import fetchPost from '../../assets/fetchPosts.jpg';
 
-const images = [dataLoadRedux, rulesOfReducers, dontMutateState, uCanMutateState, howToUpdateState, fetchPost]
+const images = [dataLoadRedux, rulesOfReducers, uCanMutateState, dontMutateState, howToUpdateState, fetchPost]
 
 class PostList extends Component {
   state = {showImages: false, showList: false,};
 
   componentDidMount(){
-    this.props.fetchPosts();
+    this.props.fetchPostsAndUsers();
   }
 
   renderList() {
@@ -46,8 +46,9 @@ class PostList extends Component {
           <h1>Post List</h1>
           <div className="list">
             <button onClick={this.showImages}>{ this.state.showImages ? 'hide' : 'show'} images</button>
+
             <div style={{display: this.state.showImages ? 'flex' : 'none', flexWrap:'wrap', gap:'20px'}}>
-              {images.map(img => <img src={img} style={{width:'300px', border:'1px solid #999', padding:'10px'}} alt="" srcset="" />)}
+              {images.map((img, ind) => <img key={ind} src={img} style={{width:'300px', border:'1px solid #999', padding:'10px'}} alt="" srcset="" />)}
             </div>   
           </div>   
           <div className="ui relaxed divided list">
@@ -63,4 +64,4 @@ const mapStateToProps = (state) => {
   return { posts: state.posts }
 }
 
-export default connect(mapStateToProps, { fetchPosts })(PostList);
+export default connect(mapStateToProps, { fetchPostsAndUsers })(PostList);
