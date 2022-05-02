@@ -1,12 +1,6 @@
-import jsonPlaceholder from "../../../Api/jsonPlaceholder"
+import jsonPlaceholder from "../../../Api/jsonPlaceholder";
 
-export const fetchPosts = () => {
-    // bad approach b/c it breaks the rule of action creating
-    const response = jsonPlaceholder.get('./posts')
-
-    return {
-        type: 'FETCH_POSTS',
-        payload: response,
-    }
-}
-
+export const fetchPosts = () => async dispatch => {
+    const response = await jsonPlaceholder.get("./posts");
+    dispatch({ type: 'FETCH_POST', payload: response})
+  };

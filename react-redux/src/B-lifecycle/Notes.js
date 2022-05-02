@@ -24,6 +24,9 @@ import syncVsAsync from "../images/syncVsAsync.jpg";
 import middleware from "../images/middleware.jpg";
 import reduxMiddleware from "../images/reduxMiddleware.jpg";
 import middlewareInRedux from "../images/middlewareInRedux.jpg";
+import reduxThunkRules from "../images/reduxThunkRules.jpg";
+import howThunkWorks from "../images/howThunkWorks.jpg";
+import thunkGithub from "../images/thunkGithub.jpg";
 
 import Placeholder from "../A-compos/Placeholder";
 import './Notes.css'
@@ -197,6 +200,13 @@ const Notes = () => {
              <img src={middleware} alt="middleware" />
              <img src={reduxMiddleware} alt="redux-middleware" />
              <img src={middlewareInRedux} alt="middleware-in-redux" />
+             <img src={reduxThunkRules} alt="redux-thunk-rules" />
+             <h3>The key part in the process below is that we can manually dispatch a function</h3>
+             <i>Another important thing is that Thunk can return a function which means we can read / change any data inside the store before it's dispatched manually!</i>
+             <img src={howThunkWorks} alt="how-thunk-works" />
+             <h3>The code below is what redux-thunk really does</h3>
+             <i>Look how short it is! It's only 15 lines long!</i>
+             <img src={thunkGithub} alt="how-thunk-works" />
 
             </Placeholder>
           
